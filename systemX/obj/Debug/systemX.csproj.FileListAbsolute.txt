@@ -1,0 +1,16 @@
+C:\Users\Enrich\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe.config
+C:\Users\Enrich\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe
+C:\Users\Enrich\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.pdb
+C:\Users\Enrich\Documents\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.exe
+C:\Users\Enrich\Documents\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.pdb
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\bin\Debug\systemX.exe.config
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\bin\Debug\systemX.exe
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\bin\Debug\systemX.pdb
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\obj\Debug\systemX.csprojResolveAssemblyReference.cache
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\obj\Debug\systemX.exe
+E:\Apps\Platform\Documents\AppData\Projects\systemX\systemX\obj\Debug\systemX.pdb
+H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe.config
+H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.exe
+H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.pdb
+H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe
+H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.pdb
