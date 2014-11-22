@@ -113,7 +113,7 @@ namespace systemX
         }
         public static void getRandomNumbers()
         {
-            #region //Local Vars
+            #region Local Vars
             int GRNa = 0, GRNb = 0, GRNc = 0, GRNd = 0, GRNe = 0, GRNf = 0, GRNg = 0; //statictics
             int GRNo; //number of operation
             #endregion
@@ -159,32 +159,92 @@ namespace systemX
             hc.Wl("\n \n \nstatistika jednotlivých čísel \n \n6: " + GRNa + "\n5: " + GRNb + "\n4: " + GRNc + "\n3: " + GRNd + "\n2: " + GRNe + "\n1: " + GRNf);
             hc.Rl();
         }
-        public static void tryCountingSkill()
-        { 
-            #region //Local Vars
-            int TCSa, TCSb, TCSc, TCSd, TCSe; //TCSa,TCSb element of counting. TCSc result(true). TCSd result(input). TCSe number of repeats
-            int TCSt = 0, TCSf = 0; // TCSt right result of counting. TCSf False result of counting
+        public static void tryCountingSkill() //Made by Snasi@ 2014
+        {
+            #region Local Vars
+            string ano;
+            int spravne = 0;
+            int spravne2 = 0;
             #endregion
-
-            hc.Wl("Zadej počet příkladů které chceš počítat");
-            while (!int.TryParse(hc.Rl(), out TCSe))
-            { hc.Cl(); hc.W("Neplatné číslo, zadejte prosím znovu: "); }
-            for (int i = 0; i < TCSe; i++)
+            
+            do
             {
-                TCSa = rnd.Next(0, 10 + 1);
-                Thread.Sleep(10);
-                TCSb = rnd.Next(0, 10 + 1);
-                hc.Wl("\n\n            " + TCSa + " * " + TCSb);
-                TCSc = TCSa * TCSb;
-                while (!int.TryParse(hc.Rl(), out TCSd))
-                { hc.Cl(); hc.W("Neplatné číslo, zadejte prosím znovu: "); }
-                if (TCSc == TCSd)
-                { hc.Wl("\nSprávný výsledek)"); TCSt = TCSt + 1; }
-                else
-                { hc.Wl("\nŠpatný výsledek"); TCSf = TCSf + 1; }
-            }
-            hc.Wl("Správných výsledků: " + TCSt + "\nŠpatných výsledků: " + TCSf);
-            hc.Rk();
+                Console.Clear();
+                Console.Write("Zadej počet příkladů:");
+                int pocet_prikladu = Convert.ToInt32(Console.ReadLine());
+                // grafika zacatek
+                Console.Write("Generuji zadaný počet příkladů na malou násobilku");
+                Thread.Sleep(500);
+                Console.Write(".");
+                Thread.Sleep(500);
+                Console.Write(".");
+                Thread.Sleep(500);
+                Console.WriteLine(".");
+                Thread.Sleep(100);
+                //grafika konec
+                
+                for (int i = 1; i <= pocet_prikladu; i++)
+                {
+                    spravne++;
+                    int nahodne_cislo = rnd.Next(1, 11);
+                    int nahodne_cislo2 = rnd.Next(1, 11);
+
+                    Console.Write(nahodne_cislo + " * " + nahodne_cislo2 + " =");
+                    int vysledek = Convert.ToInt32(Console.ReadLine());
+                    if (nahodne_cislo * nahodne_cislo2 == vysledek)
+                    {
+                        spravne2++;
+                        Console.WriteLine("Správně " + spravne2 + "/" + spravne);
+                    }
+
+                    else
+                    {
+
+                        // první + druhý = výsledek - (první + druhý)
+                        int odpoved = nahodne_cislo * nahodne_cislo2;
+                        int vysledek_else = vysledek - nahodne_cislo * nahodne_cislo2;
+                        Console.WriteLine("Špatně, napsal jsi o " + vysledek_else + " jiné číslo,správná opověd je: " + odpoved + " máš " + spravne2 + "/" + spravne);
+                    }
+
+
+                } // 2/10 2 počet správne // 10 počet celkem
+                // Console.Clear();
+                int procenta = 100 * spravne2 / spravne;
+                Console.WriteLine();
+                Console.WriteLine("Výsldek " + spravne2 + "/" + spravne);
+                Console.WriteLine("Máš " + procenta + "%");
+                if (procenta > 80)
+                {
+                    Console.WriteLine("Máš za 1");
+                    Console.WriteLine("Tady to někdo umí");
+                }
+                if (procenta <= 80 && procenta > 60)
+                {
+                    Console.WriteLine("Máš za 2");
+                    Console.WriteLine("Mohlo to  být trochu lepší");
+                }
+                if (procenta <= 60 && procenta > 40)
+                {
+                    Console.WriteLine("Máš za 3");
+                    Console.WriteLine("Chělo by to zapracovat");
+                }
+                if (procenta <= 40 && procenta > 20)
+                {
+                    Console.WriteLine("Máš za 4");
+                    Console.WriteLine("Jako vážně za 4!");
+                }
+                if (procenta <= 20)
+                {
+                    Console.WriteLine("Máš za 5");
+                    Console.WriteLine("Si úplně blbej");
+                }
+
+                Console.WriteLine("Chceš pokračovat? [a/n] ");
+                // opakování while
+                ano = Console.ReadLine();
+            } while (ano.ToLower() == "a");
+
+            Console.ReadKey();
 
         }
     }

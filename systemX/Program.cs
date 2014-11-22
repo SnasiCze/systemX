@@ -25,7 +25,7 @@ namespace systemX
             bool pokracovat = true;
             string vstup;
             //
-            hc.Wl("Výtejte v systému X \nver. 1.4.1.3 \npro vypsání příkazů napište help");
+            hc.Wl("Výtejte v systému X \nver. 1.5.2.3 \npro vypsání příkazů napište help");
             while (pokracovat)
             {
                 vstup = null;

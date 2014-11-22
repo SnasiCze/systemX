@@ -27,7 +27,7 @@ namespace systemX
         }
         public static void Hd()
         {
-            Console.WriteLine("System X \nver.1.4.1.3");
+            Console.WriteLine("System X \nver.1.5.2.3"); //(1st) = system itself, (2nd) = major changes, (3rd) = minor changes, (4rd) = bug fixes
         }
         public static void Cl()
         {
