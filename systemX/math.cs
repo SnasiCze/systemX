@@ -172,8 +172,8 @@ namespace systemX
                 Console.Clear();
                 Console.Write("Zadej počet příkladů:");
                 int pocet_prikladu = Convert.ToInt32(Console.ReadLine());
-                // grafika zacatek
-                Console.Write("Generuji zadaný počet příkladů na malou násobilku");
+                // grafika zacatek: 
+                Console.Write("Generuji zadaný počet příkladů na malou násobilku: ");
                 Thread.Sleep(500);
                 Console.Write(".");
                 Thread.Sleep(500);

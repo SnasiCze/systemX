@@ -14,3 +14,9 @@ H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.exe
 H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.pdb
 H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe
 H:\Dokumenty\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.pdb
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe.config
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.exe
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.pdb
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.exe
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\bin\Debug\systemX.pdb
+C:\Users\Snasi\Documents\Visual Studio 2013\Projects\systemX\systemX\obj\Debug\systemX.csprojResolveAssemblyReference.cache
