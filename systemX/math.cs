@@ -30,7 +30,7 @@ namespace systemX
                 switch (vstup)
                 {
                     case "help":
-                        hc.Wl(" help - vypíše seznam příkazů \n scitani - nástroj pro sčítaní libovolného počtu čísel \n nasobilka - vypíše malou násobilku\n testnasobilka - test na malou násobilku \n nahoda - nástroj pro generování náhodných čísel \n vymazat - vymaže obsah console \n z5 - vrácení do hlavního menu");
+                        hc.Wl(" help - vypíše seznam příkazů \n scitani - nástroj pro sčítaní libovolného počtu čísel \n nasobilka - vypíše malou násobilku\n testmalanasobilka - test na malou násobilku \n testvelkanasobilka - test na velkou násobilku\n nahoda - nástroj pro generování náhodných čísel \n vymazat - vymaže obsah console \n z5 - vrácení do hlavního menu");
                     break;
 
                     case "scitani":
@@ -40,12 +40,19 @@ namespace systemX
 
                     case "nasobilka":
                     hc.Cl();
+
+
                     SmallTimeing();
                     break;
 
-                    case "testnasobilka":
+                    case "testmalanasobilka": 
                     hc.Cl();
                     tryCountingSkill();
+                    break;
+
+                    case "testvelkanasobilka":
+                    hc.Cl();
+                    tryMultiplicationSkill();
                     break;
 
                     case "nahoda":
@@ -166,16 +173,8 @@ namespace systemX
             int spravne = 0;
             int spravne2 = 0;
             #endregion
-            //---------------------------------------------Samoaktivační cyklus při špatněm zadání příkazu---------------------------------------------\\
-            int x = 0;
-            do
-            {//---------------------------------------------Opakování malé násobylky pomocí cyklu white---------------------------------------------\\
-                Console.Clear();
-                Console.WriteLine("Jakou násibolku chcete? [Velkou/Malou]");
-                string rozdeleni = Console.ReadLine();
-                //---------------------------------------------Zde začíná malá násobilka---------------------------------------------\\
-                if (rozdeleni.ToLower() == "malou") 
-                {
+                  
+            //---------------------------------------------Opakování malé násobylky pomocí cyklu white---------------------------------------------\\                                     
                     do
                     {
                         Console.Clear();
@@ -191,14 +190,14 @@ namespace systemX
                         Console.WriteLine(".");
                         Thread.Sleep(100);
                         //---------------------------------------------Konec "grafiky"---------------------------------------------\\
-
+                        //---------------------------------------------Zde začíná malá násobilka---------------------------------------------\\
                         for (int i = 1; i <= pocet_prikladu; i++)
                         {
                             spravne++;
                             int nahodne_cislo = rnd.Next(1, 11);
                             int nahodne_cislo2 = rnd.Next(1, 11);
 
-                            Console.Write(nahodne_cislo + " * " + nahodne_cislo2 + " =");
+                            Console.Write(nahodne_cislo + " * " + nahodne_cislo2 + " = ");
                             int vysledek = Convert.ToInt32(Console.ReadLine());
                             //---------------------------------------------If právná odpověď---------------------------------------------\\
                             if (nahodne_cislo * nahodne_cislo2 == vysledek)
@@ -249,15 +248,25 @@ namespace systemX
                             Console.WriteLine("Máš za 5");
                             Console.WriteLine("Si úplně blbej (bez urážky)");
                         }
-
+                       
                         Console.WriteLine("Chceš pokračovat? [a/n] ");
                         //---------------------------------------------Opakování malé násobilky---------------------------------------------\\
                         ano = Console.ReadLine();
                     } while (ano.ToLower() == "a");
+                     
+                     
                 }
+    
  //-------------------------------------------Velká násobilka--------------------------------------\\
-                if (rozdeleni.ToLower() == "velkou")
+               // if (rozdeleni.ToLower() == "velkou") 
+                public static void tryMultiplicationSkill()
                 {
+                    #region Local Vars
+                    string ano;
+                    int spravne = 0;
+                    int spravne2 = 0;
+                    #endregion
+                    
                     do
                     {
                         Console.Clear();
@@ -273,14 +282,16 @@ namespace systemX
                         Console.WriteLine(".");
                         Thread.Sleep(100);
                         //---------------------------------------------Konec "grafiky"---------------------------------------------\\
-
+                        
+                       
                         for (int i = 1; i <= pocet_prikladu; i++)
                         {
+                            
                             spravne++;
-                            int nahodne_cislo = rnd.Next(1, 11);
-                            int nahodne_cislo2 = rnd.Next(1, 11);
+                            int nahodne_cislo = rnd.Next(1, 101);
+                            int nahodne_cislo2 = rnd.Next(1, 101);
 
-                            Console.Write(nahodne_cislo + " * " + nahodne_cislo2 + " =");
+                            Console.Write(nahodne_cislo + " * " + nahodne_cislo2 + " = ");
                             int vysledek = Convert.ToInt32(Console.ReadLine());
                             //---------------------------------------------If právná odpověď---------------------------------------------\\
                             if (nahodne_cislo * nahodne_cislo2 == vysledek)
@@ -334,14 +345,11 @@ namespace systemX
 
                         Console.WriteLine("Chceš pokračovat? [a/n] ");
                         //---------------------------------------------Opakování velké násobilky---------------------------------------------\\
-                        ano = Console.ReadLine();
+                       ano = Console.ReadLine();
                     } while (ano.ToLower() == "a");
                   
-                }
-                //---------------------------------------------Špatný příkaz program pojede od začátku výběru násobilky---------------------------------------------\\
-                Console.WriteLine("Špatný příkaz !!");
-                Thread.Sleep(1000);
-            } while (x < 5);
+                
+               
             Console.ReadLine();
 
         }
